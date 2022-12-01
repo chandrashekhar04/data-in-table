@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(141, 141, 235);  
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+form input{
+    /* height: 10rem; */
+    /* width: 1rem; */
+    padding: 1rem;
+}
+
+form .input{
+    height: 2.5rem;
+    width: 15rem;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: 0.5rem;
+    text-align: center;
+    background-color: rgb(52, 52, 169);
+    color: white;
+}
+
+form select{
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: rgb(52, 52, 169);
+    color: white;   
+    cursor: pointer;
+    margin: 0.5rem;
+    text-align: center;
+}
+::placeholder{
+    color: white;
+}
+
+form button{
+    height: 3rem;
+    width: 15rem;
+    background-color: rgb(52, 52, 169);
+    color: white;
+    margin: 0.5rem;
+}
+
+form button:hover{
+    color: rgb(52, 52, 169);
+    background-color: white;
+    cursor: pointer;
+}
+
+table,tr,td,th{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1rem;
+    color: white;
+    background-color: rgb(52, 52, 169);
+}
+
+/* form #first{
+
+    color: red;
+} */
+
+
+input[type=radio]{
+    height:25px;
+    display: inline-flex;
+    width: 25px;
+    accent-color: rgb(52, 52, 169);
+    margin: 0.5rem;
+
+}
+
+.inputErr{
+    color: red;
+}

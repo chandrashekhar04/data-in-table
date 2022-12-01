@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableData</title>
+    <link rel="stylesheet" href="tabledata.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Form Validation</h1>
+        <form action="">
+          <input autofocus type="text" id="name" class="input"  placeholder="Enter your name"><span class="err"></span><br>
+          
+          <input type="text" id="age" class="input"  placeholder="Enter your age"><span class="err"></span><br>
+          
+          <input type="text" id="phone" class="input"  placeholder="Enter your phone"><span class="err"></span><br>
+          
+          <input type="text" id="email" class="input" placeholder="Enter your email"><span class="err"></span><br>
+          
+          <input class="gender" id="first" type="radio" name="gender" value="male">Male
+          <input class="gender" type="radio" name="gender" value="female">Female
+          <input class="gender" type="radio" name="gender" value="other">Other
+          <span class="err"></span><br>
+    
+          <select name="" id="hometown">
+            <option value="" selected disabled>Select Hometown</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Jodhpur">Jodhpur</option>
+            <option value="Ajmer">Ajmer</option>
+            <option value="Kota">Kota</option>
+            <option value="Pilani">Pilani</option>
+            <option value="Nagaur">Nagaur</option>
+          </select>
+          <span class="err"></span><br>
+    
+          <button type="submit">Submit</button>
+        </form><br><br>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Hometown</th>
+            </tr>
+            <!-- <tr>
+                <td class="first"></td>
+                <td class="second"></td>
+                <td class="third"></td>
+                <td class="fourth"></td>
+                <td class="fifth"></td>
+                <td class="sixth"></td>
+            </tr> -->
+        </table>
+    </div>
+
+
+    <script>
+        let form = document.querySelector("form")
+
+        form.onsubmit = (e) => 
+        {
+            e.preventDefault();
+            let name = document.querySelector("#name")
+            let age = document.querySelector("#age")
+            let phone = document.querySelector("#phone")
+            let email = document.querySelector("#email")
+            let radios = document.querySelectorAll(".gender")
+            let hometown = document.querySelector("#hometown")
+
+            let table=document.querySelector("table")
+            
+            // let first=document.querySelector(".first")
+            // let second=document.querySelector(".second")
+            // let third=document.querySelector(".third")
+            // let fourth=document.querySelector(".fourth")
+            // let fifth=document.querySelector(".fifth")
+            // let sixth=document.querySelector(".sixth")
+
+
+            let tr=document.createElement("tr")
+
+
+            let td=document.createElement("td")
+            let data=table.insertAdjacentElement("beforeend",tr)
+            let namedata=data.appendChild(td)
+            element.classList.remove("inputErr");
+
+            namedata.innerHTML=name.value
+
+            // let tr1=document.createElement("tr")
+            let td1=document.createElement("td")
+            let data1=table.insertAdjacentElement("beforeend",tr)
+            let agedata=data1.appendChild(td1)
+            // let td2=document.createElement("td")
+            // let data2=table.children[1].insertAdjacentElement("afterend",td2)
+            
+            agedata.innerHTML=age.value
+
+
+            let td2=document.createElement("td")
+            let data2=table.insertAdjacentElement("beforeend",tr)
+            let phonedata=data2.appendChild(td2)
+
+            phonedata.innerHTML=phone.value
+
+
+            let td3=document.createElement("td")
+            let data3=table.insertAdjacentElement("beforeend",tr)
+            let emaildata=data3.appendChild(td3)
+
+            emaildata.innerHTML=email.value
+
+            
+            // let gendervalue=''
+            let td4=document.createElement("td")
+            let data4=table.insertAdjacentElement("beforeend",tr)
+            let genderdata=data4.appendChild(td4)
+            for(let i=0;i<radios.length;i++){
+                if(radios[i].checked){
+                    genderdata.innerHTML=radios[i].value
+                }
+            }
+
+
+
+            let td5=document.createElement("td")
+            let data5=table.insertAdjacentElement("beforeend",tr)
+            let hometowndata=data5.appendChild(td5)
+
+            hometowndata.innerHTML=hometown.value
+
+            
+
+          
+            
+            // data1.innerHTML=age.value
+
+            // first.innerHTML=name.value
+            // second.innerHTML=age.value
+            // third.innerHTML=phone.value
+            // fourth.innerHTML=email.value
+            // fifth.innerHTML=radios.value
+            // sixth.innerHTML=hometown.value
+
+            document.querySelector("form").reset();
+
+
+        }
+        
+    </script>
+</body>
+</html>
